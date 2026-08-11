@@ -1,6 +1,5 @@
 # --- Electricity Bill Calculator App ---
 import streamlit as st
-
 st.set_page_config(page_title="Advanced Smart Bill Calculator", page_icon="⚡")
 st.title("⚡ Advanced Smart Bill Calculator")
 st.write("Your electricity bill accurately based on room appliance usage.")

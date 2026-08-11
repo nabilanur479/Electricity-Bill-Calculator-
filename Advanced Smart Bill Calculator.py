@@ -36,13 +36,14 @@ for index, (room_name, devices) in enumerate(rooms_data.items()):
         st.subheader(f"🏠 {room_name} Room")
         inputs[room_name] = {}
         
-        col1, col2, col3 = st.columns()
+        # এখানে ৩টি কলামের জন্য সংখ্যা (3) নিখুঁতভাবে বসানো হয়েছে
+        col1, col2, col3 = st.columns(3)
         col1.markdown("**Device**")
         col2.markdown("**Watt**")
         col3.markdown("**Hours**")
         
         for device, defaults in devices.items():
-            c1, c2, c3 = st.columns()
+            c1, c2, c3 = st.columns(3)
             c1.text(device)
             w_input = c2.text_input("Watt", value=defaults, key=f"{room_name}_{device}_w", label_visibility="collapsed")
             h_input = c3.text_input("Hours", value=defaults, key=f"{room_name}_{device}_h", label_visibility="collapsed")
